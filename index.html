@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width , initial-scale=1 , shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+
+    <!-- CSS cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-dark fixed-top text-white navbar-expand mb-1">
+      <h1 id="navbarHeading">Tic Tac Toe</h1>
+
+      <!-- <a href="#" tabindex="0" role="button" class="btn btn-outline-warning navbar-button" data-container="body" data-toggle="popover"
+       data-placement="bottom" title="Choose any colour" id="button"> -->
+       <button class="btn btn-outline-warning navbar-button" data-toggle="collapse" data-target="#popoverColoursTable" id="navButton">
+        Colour Palette
+       </button> 
+      
+
+
+    </nav>
+
+    <div id="popoverColoursTable" class="fixed-top container-fluid colour-palette collapse">
+      <div class="row mx-auto text-center d-block mt-2 mb-4">
+
+        <div height="50" width="50">
+          <img src="images/colour-1.png" alt="Image1" id="image1" height="50" width="50" class="colour" name="#303960-#EA9A96">
+  
+          <img src="images/colour-2.png" alt="Image2" id="image2" height="50" width="50" class="colour" name="#FFD5E5-#FFFFDD">
+ 
+          <img src="images/colour-3.png" alt="Image3" id="image3" height="50" width="50" class="colour" name="#000000-#323232">
+        
+          <img src="images/colour-4.png" alt="Image4" id="image4" height="50" width="50" class="colour" name="#CCEABB-#F7F7F7">
+
+          <img src="images/colour-5.png" alt="Image5" id="image5" height="50" width="50" class="colour" name="#ABC2E8-#DBC6EB">
+
+          <img src="images/colour-6.png" alt="Image6" id="image6" height="50" width="50" class="colour" name="#AACFCF-#679B9B">
+  
+          <img src="images/colour-7.png" alt="Image7" id="image7" height="50" width="50" class="colour" name="#3F3F44-#FDCB9E">
+ 
+          <img src="images/colour-8.png" alt="Image8" id="image8" height="50" width="50" class="colour" name="#241663-#A72693">
+ 
+          <img src="images/colour-9.png" alt="Image9" id="image9" height="50" width="50" class="colour" name="#DBDBDB-#F0A500">
+        </div>
+
+      </div>
+    </div>
+          <!-- <div id="popoverColoursTable" class="fixed-top colour-palette">
+            <div class="row mx-auto d-block mt-2 mb-4">
+          
+              <div class="colour col-4 d-inline" height="50" width="50">
+                <img src="images/colour-1.png" alt="Image1" id="image1" height="50" width="50">
+              </div>
+          
+              <div class="colour col-4 d-inline">
+                <img src="images/colour-2.png" alt="Image2" id="image2" height="50" width="50">
+              </div>
+          
+              <div class="colour col-4 d-inline">
+                <img src="images/colour-3.png" alt="Image3" id="image3" height="50" width="50">
+              </div>
+          
+            </div>
+            <div class="row mx-auto d-block mb-4">
+          
+              <div class="colour col-4 d-inline">
+                <img src="images/colour-4.png" alt="Image4" id="image4" height="50" width="50">
+              </div>
+          
+              <div class="colour col-4 d-inline">
+                <img src="images/colour-5.png" alt="Image5" id="image5" height="50" width="50">
+              </div>
+          
+              <div class="colour col-4 d-inline">
+                <img src="images/colour-6.png" alt="Image6" id="image6" height="50" width="50">
+              </div>
+          
+            </div>
+          
+            <div class="row mx-auto d-block">
+          
+              <div class="colour col-4 d-inline">
+                <img src="images/colour-7.png" alt="Image7" id="image7" height="50" width="50">
+              </div>
+          
+              <div class="colour col-4 d-inline">
+                <img src="images/colour-8.png" alt="Image8" id="image8" height="50" width="50">
+              </div>
+          
+              <div class="colour col-4 d-inline">
+                <img src="images/colour-9.png" alt="Image9" id="image9" height="50" width="50">
+              </div>
+          
+            </div>
+          </div> -->
+    
+
+    <div class="container">
+      
+      <div class="row content main-area" id="mainArea">
+        
+        <!-- <h1 class="main-heading">Tic Tac Toe</h1>
+        <input type="radio" name="playermode" id="P1mode">
+        <label for="P1mode"> 1P </label>
+        <input type="radio" name="playermode" id="P2mode">
+        <label for="P2mode"> 2P </label> -->
+      <!-- <div class="row content"> -->
+        <h1 class="col-12 content">Tic Tac Toe</h1>
+      <!-- </div>
+      
+      <div class="row content"> -->
+        <h3 class="col-12" id="selectMode">Select game mode</h3>
+
+        <!-- fiddle start -->
+        <div class="row mx-auto mt-5">
+         <div class="player mr-1" name="P1" id="P1">
+           <h1 class="pt-5">1P</h1>
+         </div>
+        <div class="player ml-1" name="P2" id="P2">
+          <h1 class="pt-5">2P</h1>
+        </div>
+        </div>
+        <!-- fiddle end -->
+
+        <!-- start -->
+        <!-- <div class="btn-group btn-group-toggle m-auto col-4" data-toggle="buttons">
+          <label for="1P" class="btn btn-primary active">
+            <input type="radio" name="playermode" id="1P" autocomplete="off" checked>1P
+          </label>
+          <label for="2P" class="btn btn-primary">
+            <input type="radio" name="playermode" id="2P" autocomplete="off">2P
+          </label>
+        </div> -->
+
+        <!-- end -->
+
+      <!-- </div> -->
+      
+
+      </div>
+
+      <div class="score-board text-center content" id="scoreBoard">
+        <h2 class="content font-weight-bold">Scores</h2>
+        <div class="row">
+          <div class="col-6 col-sm-4 offset-sm-2">
+
+             <!-- X Scorecard -->
+
+            <div id="scoreX">
+              <div class="row">
+                <div class="col-4 ml-5">
+                  <i class="fa fa-times fa-5x" aria-hidden="true"></i>
+                </div>
+
+                <div class="offset-2 col-4 mr-0 order-sm-last">
+                  <span class="score-value" id="Xvalue">3</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          
+          <!-- Y ScoreCard -->
+          
+          <div class="col-6 col-sm-4">
+            <div id="scoreO">
+              <div class="row">
+                
+                <div class="offset-2 col-4 mr-0">
+                  <span class="score-value" id="Ovalue">3</span>
+                </div>
+                
+                <div class="col-4 ml-5">
+                  <i class="fa fa-circle-o fa-5x" aria-hidden="true"></i>
+                </div>
+          
+                
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+
+    
+    
+      <!-- <div class="radio-group">
+        <div class="radio cell">1P</div>1P
+        <div class="radio cell">2P</div>2P
+      </div> -->
+
+      <!-- Main board area -->
+      
+      <!-- <div class="row">
+        <div class="col-12 col-sm-4 offset-sm-2 align-items-center"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-4 offset-sm-2 align-items-center"></div>
+      </div>
+    
+
+      <div class="container-fluid" style=" background-color: blue;">
+
+      <div class="row">
+        <div class="col-12 col-sm-6 col-lg-4"></div>
+        <div class="col-12 col-sm-6 col-lg-4"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-sm-4"></div>
+        <div class="col-12 col-sm-4"></div>
+      </div> 
+      </div>-->
+
+      <div class="row game-board content" id="gameBoard">
+        <!-- <div class="col-sm-6 col-lg-4" id="mainBoard"> -->
+
+        <div class="col-12">
+          <table class="main-table mx-auto">
+
+          <tr>
+            <td class="main-td">
+              <div class="cell" id="cell1"><i></i></div>
+            </td>
+            <td class="main-td">
+              <div class="cell" id="cell2"><i></i></div>
+            </td>
+            <td class="main-td">
+              <div class="cell" id="cell3"><i></i></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="main-td">
+              <div class="cell" id="cell4"><i></i></div>
+            </td>
+            <td class="main-td">
+              <div class="cell" id="cell5"><i></i></div>
+            </td>
+            <td class="main-td">
+              <div class="cell" id="cell6"><i></i></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="main-td">
+              <div class="cell" id="cell7"><i></i></div>
+            </td>
+            <td class="main-td">
+              <div class="cell" id="cell8"><i></i></div>
+            </td>
+            <td class="main-td">
+              <div class="cell" id="cell9"><i></i></div>
+            </td>
+          </tr>
+
+          </table>
+          </div>
+          
+          <!-- <div class="col-12"> -->
+            <button id="resetScore" class="btn btn-primary mx-auto mt-5">Reset Score</button>
+          <!-- </div> -->
+        </div>
+    <!-- </div> -->
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->
+    
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       
+    <!-- Local Javascript Files -->
+    <script src="home.js"></script>
+  </body>
+</html>
